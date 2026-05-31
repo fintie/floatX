@@ -89,7 +89,7 @@
 
     li { margin: 9px 0; }
 
-    .box, .step, .project-card {
+    .box, .step {
       border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.92);
@@ -131,52 +131,36 @@
       font-weight: 650;
     }
 
-    .project-grid {
+    .experience-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 30px;
+      align-items: center;
       max-width: 1120px;
-      margin-top: 20px;
     }
 
-    .project-card {
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
-    }
-
-    .project-media {
+    .experience-media {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-      background: #eef2ff;
-      border-bottom: 1px solid var(--line);
+      gap: 12px;
     }
 
-    .project-media.dual {
+    .experience-media.dual {
       grid-template-columns: 1fr 1fr;
     }
 
-    .project-card img {
-      display: block;
+    .experience-media img {
       width: 100%;
       aspect-ratio: 1.45;
       object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 44px rgba(15, 23, 42, 0.1);
       background: #eef2ff;
     }
 
-    .project-body {
-      padding: 18px 18px 20px;
-    }
-
-    .project-body h3 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .project-body p {
-      font-size: 17px;
-      margin: 0;
+    .experience-media.dual img {
+      height: 330px;
+      aspect-ratio: auto;
     }
 
     .timeline {
@@ -216,8 +200,9 @@
 
     @media (max-width: 760px) {
       .slide { padding: 34px 24px; }
-      .two-col, .timeline, .project-grid { grid-template-columns: 1fr; }
-      .project-media.dual { grid-template-columns: 1fr; }
+      .two-col, .timeline, .experience-grid { grid-template-columns: 1fr; }
+      .experience-media.dual { grid-template-columns: 1fr; }
+      .experience-media.dual img { height: auto; aspect-ratio: 1.45; }
       h1 { font-size: 38px; }
       h2 { font-size: 31px; }
       p, ul, ol { font-size: 19px; }
@@ -229,43 +214,7 @@
     <section class="slide">
       <div class="kicker">Positioning for FloatX</div>
       <h1>AI + Blockchain Infrastructure for Private Market Liquidity</h1>
-      <p>Prior work across rollup wallet UX, Solana DEX aggregation, and AI-driven liquidity orchestration.</p>
-    </section>
-
-    <section class="slide">
-      <div class="kicker">Prior Work</div>
-      <h2>Three projects that map directly to FloatX's product direction.</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-media dual">
-            <img src="assets/rollups-wallet-mobile.jpg" alt="Rollups Wallet mobile wallet screens">
-            <img src="assets/rollups-wallet-dashboard.jpg" alt="Rollups Wallet dashboard and portfolio screens">
-          </div>
-          <div class="project-body">
-            <h3>Rollups Wallet</h3>
-            <p>Wallet and settlement UX for rollup-based assets, focused on making ownership, proofs, transfers, and account state understandable to users.</p>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-media">
-            <img src="assets/daggtrade-dashboard.jpg" alt="DAGG Trade multi-DEX swap dashboard">
-          </div>
-          <div class="project-body">
-            <h3>DAGG Trade</h3>
-            <p>Solana DEX aggregation, low-slippage routing, multi-protocol liquidity integration, and a one-stop trading dashboard.</p>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-media">
-            <img src="assets/liquidai-strategy.jpg" alt="LiquidAI create strategy interface">
-          </div>
-          <div class="project-body">
-            <h3>LiquidAI</h3>
-            <p>AI-assisted liquidity orchestration using live market data, reasoning cards, portfolio rebalancing, and transparent automation.</p>
-          </div>
-        </article>
-      </div>
-      <div class="caption">The common thread: turning complex market infrastructure into usable product workflows.</div>
+      <p>Sydney-based AI Agent Engineer and Data Architect with 15+ years of experience building autonomous AI workflows, intelligent data platforms, and secure real-time systems across finance, healthcare, telecom, and Web3.</p>
     </section>
 
     <section class="slide">
@@ -298,7 +247,10 @@
     <section class="slide">
       <div class="kicker">Relevant Experience</div>
       <h2>DAGG Trade: liquidity aggregation and trading dashboards.</h2>
-      <div class="two-col">
+      <div class="experience-grid">
+        <div class="experience-media">
+          <img src="assets/daggtrade-dashboard.jpg" alt="DAGG Trade multi-DEX swap dashboard">
+        </div>
         <div class="box">
           <h3>What it focused on</h3>
           <ul>
@@ -309,40 +261,51 @@
             <li>Better routing across fragmented liquidity</li>
           </ul>
         </div>
+      </div>
+      <p class="caption">Why it matters to FloatX: private-market liquidity is fragmented across investors, issuers, funds, jurisdictions, currencies, and settlement processes.</p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Relevant Experience</div>
+      <h2>LiquidAI: AI should live inside the investor workflow.</h2>
+      <div class="experience-grid">
+        <div class="experience-media">
+          <img src="assets/liquidai-strategy.jpg" alt="LiquidAI create strategy interface">
+        </div>
         <div class="box">
-          <h3>Why it matters to FloatX</h3>
-          <p>Private-market liquidity is fragmented across investors, issuers, funds, jurisdictions, currencies, and settlement processes.</p>
-          <p>The product problem is similar: make fragmented liquidity understandable, tradable, and trusted.</p>
+          <p>AI is most useful when it reduces friction in real decisions, not when it sits beside the product as a generic chatbot.</p>
+          <ul>
+            <li>Opportunity summaries</li>
+            <li>Investor suitability explanations</li>
+            <li>Asset comparison</li>
+            <li>Deal memo generation</li>
+            <li>Risk and liquidity explanation</li>
+            <li>Sales team investor matching</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="slide">
       <div class="kicker">Relevant Experience</div>
-      <h2>LiquidAI: AI should live inside the investor workflow.</h2>
-      <p>AI is most useful when it reduces friction in real decisions, not when it sits beside the product as a generic chatbot.</p>
-      <ul>
-        <li>Opportunity summaries</li>
-        <li>Investor suitability explanations</li>
-        <li>Asset comparison</li>
-        <li>Deal memo generation</li>
-        <li>Risk and liquidity explanation</li>
-        <li>Sales team investor matching</li>
-      </ul>
-    </section>
-
-    <section class="slide">
-      <div class="kicker">Relevant Experience</div>
       <h2>Rollups Wallet: blockchain UX for mainstream users.</h2>
-      <p>FloatX users should not need to understand blockchain to benefit from it. The product experience should translate infrastructure into trust.</p>
-      <ul>
-        <li>Clear ownership records</li>
-        <li>Verifiable transaction history</li>
-        <li>Safer settlement flows</li>
-        <li>Transparent status updates</li>
-        <li>Wallet and FX flows that feel familiar</li>
-        <li>Compliance-friendly auditability</li>
-      </ul>
+      <div class="experience-grid">
+        <div class="experience-media dual">
+          <img src="assets/rollups-wallet-mobile.jpg" alt="Rollups Wallet mobile wallet screens">
+          <img src="assets/rollups-wallet-dashboard.jpg" alt="Rollups Wallet dashboard and portfolio screens">
+        </div>
+        <div class="box">
+          <p>FloatX users should not need to understand blockchain to benefit from it. The product experience should translate infrastructure into trust.</p>
+          <ul>
+            <li>Clear ownership records</li>
+            <li>Verifiable transaction history</li>
+            <li>Safer settlement flows</li>
+            <li>Transparent status updates</li>
+            <li>Wallet and FX flows that feel familiar</li>
+            <li>Compliance-friendly auditability</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="slide">
