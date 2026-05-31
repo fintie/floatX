@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI + Blockchain Infrastructure for Private Market Liquidity</title>
+  <style>
+    :root {
+      --ink: #121826;
+      --muted: #5b6475;
+      --line: #d9dee8;
+      --blue: #1457d9;
+      --cyan: #18a6b8;
+      --green: #1f8a5b;
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+
+    .slide {
+      min-height: 100vh;
+      padding: 56px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      page-break-after: always;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(120deg, rgba(20, 87, 217, 0.06), rgba(24, 166, 184, 0.04) 42%, rgba(31, 138, 91, 0.05)),
+        var(--panel);
+    }
+
+    .slide:nth-child(even) { background: #fbfcff; }
+
+    .kicker {
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      max-width: 980px;
+      font-size: 58px;
+      line-height: 1.02;
+      margin: 0 0 24px;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      max-width: 980px;
+      font-size: 42px;
+      line-height: 1.08;
+      margin: 0 0 22px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      font-size: 25px;
+      margin: 0 0 16px;
+      letter-spacing: 0;
+    }
+
+    p {
+      max-width: 930px;
+      font-size: 23px;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    ul, ol {
+      max-width: 940px;
+      margin: 10px 0 0;
+      padding-left: 27px;
+      color: var(--muted);
+      font-size: 22px;
+    }
+
+    li { margin: 9px 0; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .signal, .box, .step {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .signal { padding: 26px; }
+    .signal strong { display: block; font-size: 18px; color: var(--ink); margin-bottom: 8px; }
+    .signal span {
+      display: block;
+      color: var(--muted);
+      font-size: 18px;
+      margin: 12px 0;
+      padding-left: 16px;
+      border-left: 3px solid var(--cyan);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 1080px;
+    }
+
+    .box { padding: 24px; background: #fff; }
+    .box p, .box li { font-size: 19px; }
+
+    .thesis {
+      font-size: 31px;
+      color: var(--ink);
+      max-width: 980px;
+      padding-left: 26px;
+      border-left: 6px solid var(--blue);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+      max-width: 1000px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 8px 13px;
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 650;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1120px;
+    }
+
+    .step {
+      border-top: 5px solid var(--blue);
+      padding: 22px;
+      background: #fff;
+    }
+
+    .step:nth-child(2) { border-top-color: var(--cyan); }
+    .step:nth-child(3) { border-top-color: var(--green); }
+    .step h3 { font-size: 23px; }
+    .step li { font-size: 17px; }
+
+    .footer {
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .slide {
+        width: 13.333in;
+        height: 7.5in;
+        min-height: auto;
+        padding: 0.58in 0.72in;
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .slide { padding: 34px 24px; }
+      .hero-grid, .two-col, .timeline { grid-template-columns: 1fr; }
+      h1 { font-size: 38px; }
+      h2 { font-size: 31px; }
+      p, ul, ol { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="slide">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">Positioning for FloatX</div>
+          <h1>AI + Blockchain Infrastructure for Private Market Liquidity</h1>
+          <p>How I can help FloatX turn private-market opportunities into a more liquid, explainable, and verifiable trading experience.</p>
+          <div class="footer">Prepared by Nic</div>
+        </div>
+        <div class="signal">
+          <strong>Core message</strong>
+          <span>I am not selling generic AI or Web3 skills.</span>
+          <span>I am selling the ability to connect liquidity, trading UX, wallet flows, AI workflows, and blockchain verification.</span>
+          <span>That is directly aligned with FloatX's product direction.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">The Opportunity</div>
+      <h2>FloatX is building more than an investment website.</h2>
+      <p>FloatX is positioned as a private-market trading ecosystem where investors can discover, evaluate, trade, settle, and verify high-value private opportunities.</p>
+      <ul>
+        <li>Private trading and pre-IPO access</li>
+        <li>Live market depth and liquidity signals</li>
+        <li>Virtual wallet funds and global FX</li>
+        <li>AI integrations for investor workflows</li>
+        <li>Blockchain-backed verification and auditability</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">My Positioning</div>
+      <h2>I help turn fragmented financial opportunities into usable trading infrastructure.</h2>
+      <p class="thesis">For FloatX, that means helping move private-market assets from static listings into an AI-assisted, blockchain-verifiable trading experience.</p>
+      <div class="tag-row">
+        <span class="tag">Liquidity aggregation</span>
+        <span class="tag">AI workflows</span>
+        <span class="tag">Trading dashboards</span>
+        <span class="tag">Wallet UX</span>
+        <span class="tag">Cross-chain logic</span>
+        <span class="tag">Product prototyping</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Relevant Experience</div>
+      <h2>DAGG Trade: liquidity aggregation and trading dashboards.</h2>
+      <div class="two-col">
+        <div class="box">
+          <h3>What it focused on</h3>
+          <ul>
+            <li>Low-slippage trading</li>
+            <li>Multi-protocol liquidity integration</li>
+            <li>One-click price and cost discovery</li>
+            <li>One-stop trading dashboard</li>
+            <li>Better routing across fragmented liquidity</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Why it matters to FloatX</h3>
+          <p>Private-market liquidity is fragmented across investors, issuers, funds, jurisdictions, currencies, and settlement processes.</p>
+          <p>The product problem is similar: make fragmented liquidity understandable, tradable, and trusted.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Relevant Experience</div>
+      <h2>LiquidAI: AI should live inside the investor workflow.</h2>
+      <p>AI is most useful when it reduces friction in real decisions, not when it sits beside the product as a generic chatbot.</p>
+      <ul>
+        <li>Opportunity summaries</li>
+        <li>Investor suitability explanations</li>
+        <li>Asset comparison</li>
+        <li>Deal memo generation</li>
+        <li>Risk and liquidity explanation</li>
+        <li>Sales team investor matching</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Relevant Experience</div>
+      <h2>Rollups Wallet: blockchain UX for mainstream users.</h2>
+      <p>FloatX users should not need to understand blockchain to benefit from it. The product experience should translate infrastructure into trust.</p>
+      <ul>
+        <li>Clear ownership records</li>
+        <li>Verifiable transaction history</li>
+        <li>Safer settlement flows</li>
+        <li>Transparent status updates</li>
+        <li>Wallet and FX flows that feel familiar</li>
+        <li>Compliance-friendly auditability</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Product Thesis</div>
+      <h2>FloatX can become the private-market version of a modern trading terminal.</h2>
+      <p>Not by copying public exchanges, but by building the missing intelligence and trust layer for private assets.</p>
+      <ul>
+        <li>AI explains the opportunity.</li>
+        <li>Market depth explains demand and liquidity.</li>
+        <li>Wallet flows handle funds and FX.</li>
+        <li>Blockchain verifies the transaction record.</li>
+        <li>Dashboards help investors and issuers act with confidence.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Prototype</div>
+      <h2>FloatX AI Private Market Copilot</h2>
+      <p>A focused demo that helps investors move from curiosity to confidence.</p>
+      <ol>
+        <li>Search private opportunities such as OpenAI, Ripple, ByteDance, Kraken, or Anthropic.</li>
+        <li>Generate an AI deal memo from structured opportunity data.</li>
+        <li>Compare opportunities by sector, valuation, liquidity, risk, and investor fit.</li>
+        <li>Explain live market depth in plain English.</li>
+        <li>Show wallet, FX, and settlement status.</li>
+        <li>Display blockchain-backed verification after trade completion.</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Business Impact</div>
+      <h2>This prototype targets real FloatX outcomes.</h2>
+      <div class="two-col">
+        <div class="box">
+          <h3>Investor outcomes</h3>
+          <ul>
+            <li>Understand opportunities faster</li>
+            <li>Compare assets with less friction</li>
+            <li>Trust the transaction flow</li>
+            <li>Move from interest to action</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>FloatX outcomes</h3>
+          <ul>
+            <li>Higher conversion</li>
+            <li>Faster sales follow-up</li>
+            <li>Better use of deal data</li>
+            <li>Stronger AI + Blockchain differentiation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Execution Plan</div>
+      <h2>30 / 60 / 90 day contribution plan</h2>
+      <div class="timeline">
+        <div class="step">
+          <h3>First 30 days</h3>
+          <ul>
+            <li>AI opportunity summaries</li>
+            <li>Investor FAQ assistant</li>
+            <li>Deal memo generator</li>
+            <li>Opportunity comparison UI</li>
+            <li>Sales research assistant</li>
+          </ul>
+        </div>
+        <div class="step">
+          <h3>Next 60 days</h3>
+          <ul>
+            <li>Market depth explanation</li>
+            <li>Liquidity signal design</li>
+            <li>Investor demand indicators</li>
+            <li>Valuation context</li>
+            <li>Watchlists and alerts</li>
+          </ul>
+        </div>
+        <div class="step">
+          <h3>By 90 days</h3>
+          <ul>
+            <li>Wallet funds status UX</li>
+            <li>FX conversion flow</li>
+            <li>Settlement timeline</li>
+            <li>Entity selection</li>
+            <li>Blockchain verification display</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Best Fit</div>
+      <h2>How I would work with FloatX</h2>
+      <p>I would be most valuable as a product-minded builder across AI, blockchain, and trading UX.</p>
+      <ul>
+        <li>Prototype new AI investment workflows</li>
+        <li>Design and build private-market trading dashboards</li>
+        <li>Improve wallet and settlement UX</li>
+        <li>Translate blockchain capabilities into investor-facing features</li>
+        <li>Turn repeated sales and investor questions into product features</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Closing Message</div>
+      <h2>I understand how to turn fragmented liquidity, complex financial data, and blockchain infrastructure into a product investors can use.</h2>
+      <p>For FloatX, that means helping build the AI-assisted, blockchain-verifiable private-market trading experience that sits between opportunity discovery and completed settlement.</p>
+      <p class="thesis">The best next step is a working FloatX-specific prototype: AI Private Market Trading Copilot.</p>
+    </section>
+  </main>
+</body>
+</html>
