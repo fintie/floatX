@@ -51,15 +51,15 @@
     }
 
     h1 {
-      max-width: 980px;
-      font-size: 58px;
+      max-width: 1040px;
+      font-size: 60px;
       line-height: 1.02;
       margin: 0 0 24px;
       letter-spacing: 0;
     }
 
     h2 {
-      max-width: 980px;
+      max-width: 1040px;
       font-size: 42px;
       line-height: 1.08;
       margin: 0 0 22px;
@@ -91,26 +91,37 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 38px;
       align-items: center;
     }
 
-    .signal, .box, .step {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.9);
+    .hero-montage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: stretch;
     }
 
-    .signal { padding: 26px; }
-    .signal strong { display: block; font-size: 18px; color: var(--ink); margin-bottom: 8px; }
-    .signal span {
-      display: block;
-      color: var(--muted);
-      font-size: 18px;
-      margin: 12px 0;
-      padding-left: 16px;
-      border-left: 3px solid var(--cyan);
+    .hero-montage img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.8);
+      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.16);
+      background: #fff;
+    }
+
+    .hero-montage img:first-child {
+      grid-column: span 2;
+      height: 250px;
+    }
+
+    .box, .step, .project-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.92);
     }
 
     .two-col {
@@ -149,6 +160,43 @@
       font-weight: 650;
     }
 
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1120px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+    }
+
+    .project-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1.45;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+      background: #eef2ff;
+    }
+
+    .project-body {
+      padding: 18px 18px 20px;
+    }
+
+    .project-body h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .project-body p {
+      font-size: 17px;
+      margin: 0;
+    }
+
     .timeline {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -167,10 +215,10 @@
     .step h3 { font-size: 23px; }
     .step li { font-size: 17px; }
 
-    .footer {
-      margin-top: 34px;
+    .caption {
       color: var(--muted);
       font-size: 16px;
+      margin-top: 20px;
     }
 
     @media print {
@@ -186,7 +234,9 @@
 
     @media (max-width: 760px) {
       .slide { padding: 34px 24px; }
-      .hero-grid, .two-col, .timeline { grid-template-columns: 1fr; }
+      .hero-grid, .two-col, .timeline, .project-grid { grid-template-columns: 1fr; }
+      .hero-montage { grid-template-columns: 1fr; }
+      .hero-montage img:first-child { grid-column: auto; }
       h1 { font-size: 38px; }
       h2 { font-size: 31px; }
       p, ul, ol { font-size: 19px; }
@@ -200,16 +250,43 @@
         <div>
           <div class="kicker">Positioning for FloatX</div>
           <h1>AI + Blockchain Infrastructure for Private Market Liquidity</h1>
-          <p>How I can help FloatX turn private-market opportunities into a more liquid, explainable, and verifiable trading experience.</p>
-          <div class="footer">Prepared by Nic</div>
+          <p>Prior work across rollup wallet UX, Solana DEX aggregation, and AI-driven liquidity orchestration.</p>
         </div>
-        <div class="signal">
-          <strong>Core message</strong>
-          <span>I am not selling generic AI or Web3 skills.</span>
-          <span>I am selling the ability to connect liquidity, trading UX, wallet flows, AI workflows, and blockchain verification.</span>
-          <span>That is directly aligned with FloatX's product direction.</span>
+        <div class="hero-montage" aria-label="Previous project visuals">
+          <img src="assets/rollups-wallet.svg" alt="Rollups Wallet product visual">
+          <img src="assets/daggtrade.svg" alt="DaggTrade product visual">
+          <img src="assets/liquidai.svg" alt="LiquidAI product visual">
         </div>
       </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Prior Work</div>
+      <h2>Three projects that map directly to FloatX's product direction.</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="assets/rollups-wallet.svg" alt="Rollups Wallet interface visual">
+          <div class="project-body">
+            <h3>Rollups Wallet</h3>
+            <p>Wallet and settlement UX for rollup-based assets, focused on making ownership, proofs, transfers, and account state understandable to users.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="assets/daggtrade.svg" alt="DaggTrade DEX aggregation dashboard visual">
+          <div class="project-body">
+            <h3>DAGG Trade</h3>
+            <p>Solana DEX aggregation, low-slippage routing, multi-protocol liquidity integration, and a one-stop trading dashboard.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="assets/liquidai.svg" alt="LiquidAI liquidity orchestration dashboard visual">
+          <div class="project-body">
+            <h3>LiquidAI</h3>
+            <p>AI-assisted liquidity orchestration using live market data, reasoning cards, portfolio rebalancing, and transparent automation.</p>
+          </div>
+        </article>
+      </div>
+      <div class="caption">The common thread: turning complex market infrastructure into usable product workflows.</div>
     </section>
 
     <section class="slide">
