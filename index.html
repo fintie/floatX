@@ -89,35 +89,6 @@
 
     li { margin: 9px 0; }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 38px;
-      align-items: center;
-    }
-
-    .hero-montage {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-items: stretch;
-    }
-
-    .hero-montage img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.8);
-      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.16);
-      background: #fff;
-    }
-
-    .hero-montage img:first-child {
-      grid-column: span 2;
-      height: 250px;
-    }
-
     .box, .step, .project-card {
       border: 1px solid var(--line);
       border-radius: 8px;
@@ -174,12 +145,23 @@
       box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
     }
 
+    .project-media {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      background: #eef2ff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-media.dual {
+      grid-template-columns: 1fr 1fr;
+    }
+
     .project-card img {
       display: block;
       width: 100%;
       aspect-ratio: 1.45;
       object-fit: cover;
-      border-bottom: 1px solid var(--line);
       background: #eef2ff;
     }
 
@@ -234,9 +216,8 @@
 
     @media (max-width: 760px) {
       .slide { padding: 34px 24px; }
-      .hero-grid, .two-col, .timeline, .project-grid { grid-template-columns: 1fr; }
-      .hero-montage { grid-template-columns: 1fr; }
-      .hero-montage img:first-child { grid-column: auto; }
+      .two-col, .timeline, .project-grid { grid-template-columns: 1fr; }
+      .project-media.dual { grid-template-columns: 1fr; }
       h1 { font-size: 38px; }
       h2 { font-size: 31px; }
       p, ul, ol { font-size: 19px; }
@@ -246,18 +227,9 @@
 <body>
   <main>
     <section class="slide">
-      <div class="hero-grid">
-        <div>
-          <div class="kicker">Positioning for FloatX</div>
-          <h1>AI + Blockchain Infrastructure for Private Market Liquidity</h1>
-          <p>Prior work across rollup wallet UX, Solana DEX aggregation, and AI-driven liquidity orchestration.</p>
-        </div>
-        <div class="hero-montage" aria-label="Previous project visuals">
-          <img src="assets/rollups-wallet.svg" alt="Rollups Wallet product visual">
-          <img src="assets/daggtrade.svg" alt="DaggTrade product visual">
-          <img src="assets/liquidai.svg" alt="LiquidAI product visual">
-        </div>
-      </div>
+      <div class="kicker">Positioning for FloatX</div>
+      <h1>AI + Blockchain Infrastructure for Private Market Liquidity</h1>
+      <p>Prior work across rollup wallet UX, Solana DEX aggregation, and AI-driven liquidity orchestration.</p>
     </section>
 
     <section class="slide">
@@ -265,21 +237,28 @@
       <h2>Three projects that map directly to FloatX's product direction.</h2>
       <div class="project-grid">
         <article class="project-card">
-          <img src="assets/rollups-wallet.svg" alt="Rollups Wallet interface visual">
+          <div class="project-media dual">
+            <img src="assets/rollups-wallet-mobile.jpg" alt="Rollups Wallet mobile wallet screens">
+            <img src="assets/rollups-wallet-dashboard.jpg" alt="Rollups Wallet dashboard and portfolio screens">
+          </div>
           <div class="project-body">
             <h3>Rollups Wallet</h3>
             <p>Wallet and settlement UX for rollup-based assets, focused on making ownership, proofs, transfers, and account state understandable to users.</p>
           </div>
         </article>
         <article class="project-card">
-          <img src="assets/daggtrade.svg" alt="DaggTrade DEX aggregation dashboard visual">
+          <div class="project-media">
+            <img src="assets/daggtrade-dashboard.jpg" alt="DAGG Trade multi-DEX swap dashboard">
+          </div>
           <div class="project-body">
             <h3>DAGG Trade</h3>
             <p>Solana DEX aggregation, low-slippage routing, multi-protocol liquidity integration, and a one-stop trading dashboard.</p>
           </div>
         </article>
         <article class="project-card">
-          <img src="assets/liquidai.svg" alt="LiquidAI liquidity orchestration dashboard visual">
+          <div class="project-media">
+            <img src="assets/liquidai-strategy.jpg" alt="LiquidAI create strategy interface">
+          </div>
           <div class="project-body">
             <h3>LiquidAI</h3>
             <p>AI-assisted liquidity orchestration using live market data, reasoning cards, portfolio rebalancing, and transparent automation.</p>
