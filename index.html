@@ -113,33 +113,15 @@
       border-left: 6px solid var(--blue);
     }
 
-    .tag-row {
+    .tag-row, .hero-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 26px;
       max-width: 1000px;
-    }
-
-    .tag {
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 999px;
-      padding: 8px 13px;
-      color: var(--ink);
-      font-size: 16px;
-      font-weight: 650;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      max-width: 980px;
       margin-top: 24px;
     }
 
-    .hero-tags span {
+    .tag, .hero-tags span {
       border: 1px solid var(--line);
       background: rgba(255, 255, 255, 0.9);
       border-radius: 999px;
@@ -188,6 +170,11 @@
       max-width: 1120px;
     }
 
+    .timeline.five {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
     .step {
       border-top: 5px solid var(--blue);
       padding: 22px;
@@ -196,8 +183,13 @@
 
     .step:nth-child(2) { border-top-color: var(--cyan); }
     .step:nth-child(3) { border-top-color: var(--green); }
+    .step:nth-child(4) { border-top-color: #7c3aed; }
+    .step:nth-child(5) { border-top-color: #f59e0b; }
     .step h3 { font-size: 23px; }
     .step li { font-size: 17px; }
+    .timeline.five .step { padding: 18px; }
+    .timeline.five .step h3 { font-size: 19px; }
+    .timeline.five .step li { font-size: 15px; }
 
     .caption {
       color: var(--muted);
@@ -218,7 +210,7 @@
 
     @media (max-width: 760px) {
       .slide { padding: 34px 24px; }
-      .two-col, .timeline, .experience-grid { grid-template-columns: 1fr; }
+      .two-col, .timeline, .timeline.five, .experience-grid { grid-template-columns: 1fr; }
       .experience-media.dual { grid-template-columns: 1fr; }
       .experience-media.dual img { height: auto; aspect-ratio: 1.45; }
       h1 { font-size: 38px; }
@@ -246,28 +238,41 @@
     </section>
 
     <section class="slide">
-      <div class="kicker">The Opportunity</div>
-      <h2>FloatX is building more than an investment website.</h2>
-      <p>FloatX is positioned as a private-market trading ecosystem where investors can discover, evaluate, trade, settle, and verify high-value private opportunities.</p>
+      <div class="kicker">Strategic Direction</div>
+      <h2>From private opportunity listings to a private market operating system.</h2>
+      <p>Private market platforms do not win by simply listing opportunities. They win by building an ecosystem around asset discovery, investor education, community capital, fundraising support, trust infrastructure, and eventual liquidity.</p>
+      <div class="tag-row">
+        <span class="tag">Asset discovery</span>
+        <span class="tag">Investor education</span>
+        <span class="tag">Community capital</span>
+        <span class="tag">BD enablement</span>
+        <span class="tag">Wallet + settlement</span>
+        <span class="tag">Liquidity intelligence</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Platform Opportunity</div>
+      <h2>FloatX can become a multi-asset private market ecosystem.</h2>
+      <p>FloatX already spans private trading, unicorn trading, funds, debt, property, capital raising, virtual wallet funds, FX, and blockchain services. Each asset category should have its own investment narrative, risk explanation, liquidity logic, and education path.</p>
       <ul>
-        <li>Private trading and pre-IPO access</li>
-        <li>Live market depth and liquidity signals</li>
-        <li>Virtual wallet funds and global FX</li>
-        <li>AI integrations for investor workflows</li>
-        <li>Blockchain-backed verification and auditability</li>
+        <li>Deal pages should become investor decision pages, not only information pages.</li>
+        <li>AI can personalize education by investor type, language, jurisdiction, and asset class.</li>
+        <li>BD workflows can help founders activate customers, users, alumni, communities, and strategic partners.</li>
+        <li>Blockchain should be positioned as auditability, workflow, settlement, and ownership-record infrastructure.</li>
       </ul>
     </section>
 
     <section class="slide">
       <div class="kicker">My Positioning</div>
       <h2>I help turn fragmented financial opportunities into usable trading infrastructure.</h2>
-      <p class="thesis">For FloatX, that means helping move private-market assets from static listings into an AI-assisted, blockchain-verifiable trading experience.</p>
+      <p class="thesis">For FloatX, that means connecting AI education, community-led deal discovery, private-market trading UX, wallet settlement, and blockchain verification into one coherent product workflow.</p>
       <div class="tag-row">
         <span class="tag">Liquidity aggregation</span>
         <span class="tag">AI workflows</span>
         <span class="tag">Trading dashboards</span>
         <span class="tag">Wallet UX</span>
-        <span class="tag">Cross-chain logic</span>
+        <span class="tag">Cross-border communities</span>
         <span class="tag">Product prototyping</span>
       </div>
     </section>
@@ -337,112 +342,128 @@
     </section>
 
     <section class="slide">
-      <div class="kicker">Product Thesis</div>
-      <h2>FloatX can become the private-market version of a modern trading terminal.</h2>
-      <p>Not by copying public exchanges, but by building the missing intelligence and trust layer for private assets.</p>
+      <div class="kicker">AI Investor Education Layer</div>
+      <h2>Education is not a marketing add-on. It is trust infrastructure.</h2>
+      <p>For private assets, investors need deal-specific guidance on risk, liquidity, valuation, settlement, documents, and suitability. FloatX can go further by making this education personalized, multilingual, and embedded directly into each opportunity page.</p>
       <ul>
-        <li>AI explains the opportunity.</li>
-        <li>Market depth explains demand and liquidity.</li>
-        <li>Wallet flows handle funds and FX.</li>
-        <li>Blockchain verifies the transaction record.</li>
-        <li>Dashboards help investors and issuers act with confidence.</li>
+        <li>Explain this opportunity for a new private-market investor.</li>
+        <li>What are the key risks, liquidity constraints, and exit scenarios?</li>
+        <li>What documents should be reviewed before investing?</li>
+        <li>How does this compare with public market alternatives?</li>
+        <li>What kind of investor profile may be suitable for this opportunity?</li>
       </ul>
     </section>
 
     <section class="slide">
-      <div class="kicker">Prototype</div>
-      <h2>FloatX AI Private Market Copilot</h2>
-      <p>A focused demo that helps investors move from curiosity to confidence.</p>
-      <ol>
-        <li>Search private opportunities such as OpenAI, Ripple, ByteDance, Kraken, or Anthropic.</li>
-        <li>Generate an AI deal memo from structured opportunity data.</li>
-        <li>Compare opportunities by sector, valuation, liquidity, risk, and investor fit.</li>
-        <li>Explain live market depth in plain English.</li>
-        <li>Show wallet, FX, and settlement status.</li>
-        <li>Display blockchain-backed verification after trade completion.</li>
-      </ol>
+      <div class="kicker">Community-Led Deal Discovery</div>
+      <h2>Private market access can be strengthened by community capital.</h2>
+      <p>FloatX can complement traditional high-net-worth and institutional channels with founder-led communities, AI and Web3 networks, fintech operators, professional groups, customers, users, alumni, and strategic partners.</p>
+      <ul>
+        <li>Founders bring customers, users, and early supporters into an education-first investment journey.</li>
+        <li>AI, Web3, fintech, and cross-border founder communities become early deal discovery pools.</li>
+        <li>Invite-only roundtables, newsletters, and demo days help build trust before transactions.</li>
+        <li>Through NextGenius and Sydney AI/Web3 networks, I can help test this channel for FloatX.</li>
+      </ul>
     </section>
 
     <section class="slide">
-      <div class="kicker">Business Impact</div>
-      <h2>This prototype targets real FloatX outcomes.</h2>
+      <div class="kicker">Blockchain Trust Layer</div>
+      <h2>Position blockchain as workflow, auditability, settlement, and ownership records.</h2>
+      <p>The market clearly wants more accessible and liquid private assets, but private-company token exposure is sensitive. FloatX can take the stronger path: use blockchain to make private-market workflows more trustworthy without making speculative tokenization the core message.</p>
+      <ul>
+        <li>Blockchain as the record layer for transaction and ownership workflows.</li>
+        <li>Wallet as a familiar settlement and funds-status experience.</li>
+        <li>Smart contracts as approval, transfer, and evidence workflows.</li>
+        <li>Tokenization as long-term optionality, not a short-term headline.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Deal Page Evolution</div>
+      <h2>Every opportunity page should become an investor decision page.</h2>
       <div class="two-col">
         <div class="box">
-          <h3>Investor outcomes</h3>
+          <h3>Decision support</h3>
           <ul>
-            <li>Understand opportunities faster</li>
-            <li>Compare assets with less friction</li>
-            <li>Trust the transaction flow</li>
-            <li>Move from interest to action</li>
+            <li>AI deal memo</li>
+            <li>Risk summary</li>
+            <li>Comparable valuation context</li>
+            <li>Liquidity notes</li>
+            <li>Exit scenario explanation</li>
           </ul>
         </div>
         <div class="box">
-          <h3>FloatX outcomes</h3>
+          <h3>Workflow support</h3>
           <ul>
-            <li>Higher conversion</li>
-            <li>Faster sales follow-up</li>
-            <li>Better use of deal data</li>
-            <li>Stronger AI + Blockchain differentiation</li>
+            <li>Investor Q&A</li>
+            <li>Document checklist</li>
+            <li>Suitability prompts</li>
+            <li>Wallet and settlement explanation</li>
+            <li>Post-trade verification records</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="slide">
-      <div class="kicker">Execution Plan</div>
-      <h2>30 / 60 / 90 day contribution plan</h2>
-      <div class="timeline">
+      <div class="kicker">BD Enablement</div>
+      <h2>Turn repeated sales and investor questions into reusable product assets.</h2>
+      <p>FloatX can give BD teams a consistent toolkit for founder conversations, investor education, liquidity explanation, and regulatory-safe product wording.</p>
+      <ul>
+        <li>Investor-facing and founder-facing decks</li>
+        <li>AI-generated FAQ and objection handling</li>
+        <li>Liquidity, settlement, and wallet explanation templates</li>
+        <li>Founder listing assistant for materials, narrative, and Q&A preparation</li>
+        <li>Community feedback sessions for AI, Web3, fintech, and cross-border opportunities</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Proposed Pilot</div>
+      <h2>FloatX Private Market Intelligence Pilot</h2>
+      <p>A 4-6 week pilot can translate this strategy into a working prototype and BD-ready materials.</p>
+      <div class="timeline five">
         <div class="step">
-          <h3>First 30 days</h3>
-          <ul>
-            <li>AI opportunity summaries</li>
-            <li>Investor FAQ assistant</li>
-            <li>Deal memo generator</li>
-            <li>Opportunity comparison UI</li>
-            <li>Sales research assistant</li>
-          </ul>
+          <h3>AI Deal Memo</h3>
+          <ul><li>Investor-friendly summaries for private opportunities.</li></ul>
         </div>
         <div class="step">
-          <h3>Next 60 days</h3>
-          <ul>
-            <li>Market depth explanation</li>
-            <li>Liquidity signal design</li>
-            <li>Investor demand indicators</li>
-            <li>Valuation context</li>
-            <li>Watchlists and alerts</li>
-          </ul>
+          <h3>Education Q&A</h3>
+          <ul><li>Risk, liquidity, valuation, settlement, and document guidance.</li></ul>
         </div>
         <div class="step">
-          <h3>By 90 days</h3>
-          <ul>
-            <li>Wallet funds status UX</li>
-            <li>FX conversion flow</li>
-            <li>Settlement timeline</li>
-            <li>Entity selection</li>
-            <li>Blockchain verification display</li>
-          </ul>
+          <h3>Listing Assistant</h3>
+          <ul><li>Founder materials, FAQ, and investor narrative support.</li></ul>
+        </div>
+        <div class="step">
+          <h3>BD Pack</h3>
+          <ul><li>Investor and founder slides, objections, and workflow language.</li></ul>
+        </div>
+        <div class="step">
+          <h3>Community Session</h3>
+          <ul><li>Invite-only AI + private market liquidity roundtable.</li></ul>
         </div>
       </div>
     </section>
 
     <section class="slide">
       <div class="kicker">Collaboration Model</div>
-      <h2>Building across AI, blockchain, and private-market trading UX.</h2>
-      <p>The strongest contribution would be hands-on technical leadership across product prototyping, agentic AI workflows, data architecture, and investor-facing transaction experiences.</p>
+      <h2>Building across AI, blockchain, community, and private-market UX.</h2>
+      <p>The strongest contribution would be hands-on technical leadership across product prototyping, agentic AI workflows, data architecture, BD enablement, and investor-facing transaction experiences.</p>
       <ul>
-        <li>Prototype AI investment workflows that support discovery, research, and decision-making</li>
-        <li>Design private-market trading dashboards around liquidity, market depth, and investor intent</li>
-        <li>Improve wallet, FX, settlement, and post-trade verification experiences</li>
-        <li>Translate blockchain infrastructure into clear investor-facing trust signals</li>
-        <li>Convert repeated sales and investor questions into scalable product workflows</li>
+        <li>Prototype AI investment workflows that support discovery, research, and decision-making.</li>
+        <li>Design private-market dashboards around education, liquidity, market depth, and investor intent.</li>
+        <li>Improve wallet, FX, settlement, and post-trade verification experiences.</li>
+        <li>Build community-led feedback channels through AI, Web3, fintech, and cross-border networks.</li>
+        <li>Convert repeated sales and investor questions into scalable product workflows.</li>
       </ul>
     </section>
 
     <section class="slide">
-      <div class="kicker">Proposed Next Step</div>
-      <h2>AI Private Market Trading Copilot</h2>
-      <p>A focused FloatX prototype can demonstrate how private-market data, liquidity signals, wallet flows, and blockchain verification come together in one investor workflow.</p>
-      <p class="thesis">The result: a practical demo that moves from opportunity discovery to AI-assisted evaluation, market-depth explanation, settlement status, and verified post-trade records.</p>
+      <div class="kicker">Strategic Outcome</div>
+      <h2>The future of private markets is not only access. It is education, community, trust, and liquidity.</h2>
+      <p>FloatX has the opportunity to build a more institutional Australia-Asia private market model, powered by AI and supported by blockchain infrastructure.</p>
+      <p class="thesis">The practical next step is the FloatX Private Market Intelligence Pilot: a working demo that connects AI education, deal analysis, BD enablement, wallet settlement, and verified post-trade records.</p>
     </section>
   </main>
 </body>
