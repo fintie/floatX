@@ -192,6 +192,53 @@
     .timeline.six .step h3 { font-size: 18px; }
     .timeline.six .step li { font-size: 14px; }
 
+    .wallet-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+      max-width: 1120px;
+    }
+
+    .wallet-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      border-left: 5px solid var(--blue);
+    }
+
+    .wallet-card:nth-child(2) { border-left-color: var(--cyan); }
+    .wallet-card:nth-child(3) { border-left-color: var(--green); }
+    .wallet-card:nth-child(4) { border-left-color: #7c3aed; }
+    .wallet-card:nth-child(5) { border-left-color: #f59e0b; }
+    .wallet-card:nth-child(6) { border-left-color: #ec4899; }
+
+    .wallet-card h4 {
+      font-size: 22px;
+      margin: 0 0 12px;
+      font-weight: 600;
+    }
+
+    .wallet-card p {
+      font-size: 18px;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .architecture-flow {
+      padding: 24px;
+      background: #fbfcff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin-top: 28px;
+      font-size: 16px;
+      color: var(--muted);
+      font-family: 'Monaco', 'Courier New', monospace;
+      text-align: center;
+      line-height: 1.8;
+    }
+
     .caption {
       color: var(--muted);
       font-size: 16px;
@@ -211,9 +258,16 @@
 
     @media (max-width: 760px) {
       .slide { padding: 34px 24px; }
-      .two-col, .timeline, .timeline.five, .experience-grid { grid-template-columns: 1fr; }
+      .two-col, .timeline, .timeline.five, .timeline.six, .experience-grid { grid-template-columns: 1fr; }
       .experience-media.dual { grid-template-columns: 1fr; }
       .experience-media.dual img { height: auto; aspect-ratio: 1.45; }
+      .wallet-features { grid-template-columns: 1fr; gap: 16px; }
+      .wallet-card { padding: 20px; }
+      .wallet-card h4 { font-size: 18px; }
+      .wallet-card p { font-size: 16px; }
+      .timeline.six .step { padding: 14px; }
+      .timeline.six .step h3 { font-size: 16px; }
+      .timeline.six .step li { font-size: 13px; }
       h1 { font-size: 38px; }
       h2 { font-size: 31px; }
       p, ul, ol { font-size: 19px; }
@@ -484,6 +538,43 @@
     </section>
 
     <section class="slide">
+      <div class="kicker">Product Foundation</div>
+      <h2>Production-Ready Investor Wallet</h2>
+      <p>A trusted settlement account for private market investors — combining funds, entities, ownership records, settlement workflows, and blockchain-ready auditability.</p>
+      
+      <div class="wallet-features">
+        <div class="wallet-card">
+          <h4>Investor Account Layer</h4>
+          <p>Manage individual, company, trust, SMSF, and fund entity profiles with KYC/KYB and investor status.</p>
+        </div>
+        <div class="wallet-card">
+          <h4>Wallet Balance & Settlement</h4>
+          <p>Show available balance, locked funds, pending transactions, completed settlements, deposits, withdrawals, and FX status.</p>
+        </div>
+        <div class="wallet-card">
+          <h4>Ownership & Records</h4>
+          <p>Track private asset holdings, transaction confirmations, document records, and ownership evidence.</p>
+        </div>
+        <div class="wallet-card">
+          <h4>Security & Recovery</h4>
+          <p>Support MFA, passkeys, device binding, transaction limits, role-based approval, account recovery, and audit logs.</p>
+        </div>
+        <div class="wallet-card">
+          <h4>Blockchain-Ready Infrastructure</h4>
+          <p>Use blockchain as a trust and record layer for settlement events, ownership evidence, document hashes, and permissioned transfers.</p>
+        </div>
+        <div class="wallet-card">
+          <h4>Admin & Compliance Operations</h4>
+          <p>Support AML review, manual approval, reconciliation, settlement exceptions, reporting, and operational audit trails.</p>
+        </div>
+      </div>
+
+      <div class="architecture-flow">
+        Investor App → Wallet Orchestration → Custody / Payment Rails → Blockchain Record Layer → Trading / Registry / Reporting
+      </div>
+    </section>
+
+    <section class="slide">
       <div class="kicker">Collaboration Model</div>
       <h2>Building across AI, blockchain, community, and private-market UX.</h2>
       <p>The strongest contribution would be hands-on technical leadership across product prototyping, agentic AI workflows, data architecture, BD enablement, and investor-facing transaction experiences.</p>
@@ -494,13 +585,6 @@
         <li>Build community-led feedback channels through AI, Web3, fintech, and cross-border networks.</li>
         <li>Convert repeated sales and investor questions into scalable product workflows.</li>
       </ul>
-    </section>
-
-    <section class="slide">
-      <div class="kicker">Strategic Outcome</div>
-      <h2>The future of private markets is not only access. It is education, community, trust, and liquidity.</h2>
-      <p>FloatX has the opportunity to build a more institutional Australia-Asia private market model, powered by AI and supported by blockchain infrastructure.</p>
-      <p class="thesis">The practical next step is the FloatX Private Market Intelligence Pilot: a working demo that connects AI education, deal analysis, BD enablement, wallet settlement, and verified post-trade records.</p>
     </section>
   </main>
 </body>
